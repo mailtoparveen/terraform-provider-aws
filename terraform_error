@@ -1,0 +1,30 @@
+Terraform v0.12.13
++ provider.aws v2.34.0
+
+I am doing a terraform refresh for a sample code below:
+provider "aws" {
+  region = "eu-west-1"
+}
+
+resource "aws_instance" "web" {
+  ami           = "ami-0d0508ff88ef9db30"
+  instance_type = "t2.micro"
+}
+
+A0e4+eNI3KlhSp3XvfeC+8vqdimT1d8iTTzidxfC2wvyKDYWk4HRDOP/NL5DJzwVNOXm7KiBBlPH2XandP1E4U+dPrr0bzQ87ODi1ey9ypuuw7MCSRaaF3v8KN2HhnTginNWmTgRNq2Bqw+u3z2NUyiQ4i/s7w4ha8NfbzaXVZTjaIF94w6gCdSCbdwECRA9dV3jMUj18x9gjEFHPOAiLhBoIUK/zX/cOOkn0VX9tvZjGCr5DCfZ1KRRF0ZmoyBYYAC8B++d7nMlBfPt/FpgnK3vU1Ihis7letchSpKkXHHFAlVgsBGYgUFUei5MJSsHtBRgYTC/loXuBTrNAn341mhST2KEhgnV8zl/jOwvft5vuovbz7RfIdBQuYQPxlmKPSG3eFVl4X4VM9sAJAZjSTVXHgxuivDnnZBArHhn2SKUxfQWDDYOgSDOX7OqPoTDlo3mBmCLZmYSjZlEXYqb/dt0+64VZrTniixcCTYirizKbGSRgZZpbzMJc1obvFJkHbj6wWf9gw66yHuT8e4xbysKn9FA51uvvgtstjYdPdZG1LHA4mnxfmr52Ne8dkNY1o1/Y0sD3EplLUpJ4K07snWciLoCb+OizWxCf+UBDUdKKYr4vTo5e9GmirNC5f+6PlMNxdInh5VAUXbk3orwzSlv3uGO4WzCd4j0+sZwOewDCZx7jfcu/UXuRaQTjRPd1/Zfp4PQsJofmCmA+v+tgiwSq2Z5p7OFpawHLqggq3svdnZLmoVTjb0mCIyYbEOlQoUPUqAHE0D7bA==
+2019-11-05T11:04:05.158Z [DEBUG] plugin.terraform-provider-aws_v2.34.0_x4: Accept-Encoding: gzip
+2019-11-05T11:04:05.158Z [DEBUG] plugin.terraform-provider-aws_v2.34.0_x4:
+2019-11-05T11:04:05.158Z [DEBUG] plugin.terraform-provider-aws_v2.34.0_x4: Action=DescribeAccountAttributes&AttributeName.1=supported-platforms&Version=2016-11-15
+2019-11-05T11:04:05.158Z [DEBUG] plugin.terraform-provider-aws_v2.34.0_x4: -----------------------------------------------------
+2019/11/05 11:04:09 [TRACE] dag/walk: vertex "root" is waiting for "meta.count-boundary (EachMode fixup)"
+2019/11/05 11:04:09 [TRACE] dag/walk: vertex "aws_instance.web" is waiting for "provider.aws"
+2019/11/05 11:04:09 [TRACE] dag/walk: vertex "meta.count-boundary (EachMode fixup)" is waiting for "aws_instance.web"
+2019/11/05 11:04:09 [TRACE] dag/walk: vertex "provider.aws (close)" is waiting for "aws_instance.web"
+2019/11/05 11:04:14 [TRACE] dag/walk: vertex "provider.aws (close)" is waiting for "aws_instance.web"
+2019/11/05 11:04:14 [TRACE] dag/walk: vertex "root" is waiting for "meta.count-boundary (EachMode fixup)"
+2019/11/05 11:04:14 [TRACE] dag/walk: vertex "aws_instance.web" is waiting for "provider.aws"
+2019/11/05 11:04:14 [TRACE] dag/walk: vertex "meta.count-boundary (EachMode fixup)" is waiting for "aws_instance.web"
+2019/11/05 11:04:19 [TRACE] dag/walk: vertex "meta.count-boundary (EachMode fixup)" is waiting for "aws_instance.web"
+2019/11/05 11:04:19 [TRACE] dag/walk: vertex "provider.aws (close)" is waiting for "aws_instance.web"
+2019/11/05 11:04:19 [TRACE] dag/walk: vertex "root" is waiting for "meta.count-boundary (EachMode fixup)"
+2019/11/05 11:04:19 [TRACE] dag/walk: vertex "aws_instance.web" is waiting for "provider.aws"
